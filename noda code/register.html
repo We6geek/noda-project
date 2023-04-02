@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- css styles -->
+    <link rel="stylesheet" href="./css/reg.css">
+    <!-- css styles -->
+    <title>Noda | Сryptocurrency project</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <h1>NODA<span>PROJECT</span></h1>
+        <div>
+          <button class="main-btn" type="submit" onclick="openForm()">Login</button>
+          <button class="main-btn" type="submit" onclick="openForm()">Sign up</button>
+        </div>
+
+        <!-- display none -->
+
+        <div class="wrapper" id="wrapper">
+          <div class="title-text">
+            <div class="close" onclick="closeForm()"></div>
+            <div class="title login">Login Form</div>
+            <div class="title signup">Signup Form</div>
+          </div>
+          <div class="form-container">
+            <div class="slide-controls">
+              <input type="radio" name="slide" id="login" checked>
+              <input type="radio" name="slide" id="signup">
+              <label for="login" class="slide login"><p>Login</p></label>
+              <label for="signup" class="slide signup"><p>Signup</p></label>
+            </div>
+            <div class="form-inner">
+              <form action="javascript:subLogin()" class="login">
+                <div class="field">
+                  <input type="text" placeholder="Email Address" required>
+                </div>
+                <div class="field">
+                  <input type="password" placeholder="Password" required>
+                </div>
+                <div class="pass-link"><a href="#">Forgot password?</a></div>
+                <div class="field btn">
+                  <div class="btn-layer">
+                    <button type="submit"><p>Login</p></button>
+                  </div>
+                </div>
+                <div class="signup-link">Not a member? <a href="">Signup now</a></div>
+              </form>
+              <form action="javascript:subLogin()" class="signup">
+                <div class="field">
+                  <input type="text" placeholder="Email Address" required>
+                </div>
+                <div class="field">
+                  <input type="password" placeholder="Password" id="pass" required>
+                </div>
+                <div class="field">
+                  <input type="password" placeholder="Confirm password" id="confirm_pass" required onkeyup="validate_password()">
+                </div>
+                  <span id="wrong_pass_alert"></span>
+                <div class="field btn">
+                  <div class="btn-layer">
+                    <button type="submit" id="create"><p>Signup</p></button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- display none -->
+
+        <div id="particles" class="particles"></div>
+
+      </div>
+    </main>
+    <script src="./js/particles.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
